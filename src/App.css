@@ -1,38 +1,269 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  color: #111;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  border: 3px solid #111;
+  padding: 0 8px 5px 8px;
+  z-index: 4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+  position: fixed;
+  z-index: 2;
+}
+
+.active-menu {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+
+.nav-links {
+  height: 60%;
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link {
+  padding: 4px 8px;
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid #111;
+}
+
+.menu-btn {
+  color: #111;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.menu-btn:hover {
+  color: #808080;
+}
+
+/* Pages */
+
+.page {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  margin-top: 15vh;
+  min-height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  margin: 2rem 0 3rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.page p {
+  margin: 2.5rem 1.5rem;
+}
+
+/* Portfolio */
+
+.grid-container {
+  width: 100vw;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Services */
+
+.service-item {
+  margin: 2rem 0;
+}
+
+/* Form */
+
+.form {
+  width: 80%;
+  margin: 2rem 2rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #808080;
+}
+
+.form h3 {
+  margin: 3rem 0;
+  font-size: 1.8rem;
+}
+
+.label {
+  margin: 2.5rem 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.input {
+  width: 70%;
+  min-height: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.submit {
+  margin: 4rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #fefefe;
+  border: 2px solid #111;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #dbdbdb;
+}
+
+/* Footer */
+
+.footer {
+  height: 30vh;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 15vh;
+  color: #fefefe;
+}
+
+.social-icon {
+  height: 33px;
+  width: 33px;
+  margin: 0 1rem;
+  color: #fefefe;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#ig-icon:hover {
+  color: #e1306c;
+}
+
+#fb-icon:hover {
+  color: #4267b2;
+}
+
+#email-icon:hover {
+  color: #fbbc05;
+}
+
+/* Media queries */
+/* Mobile First approach, hence the min-width below */
+
+@media screen and (min-width: 700px) {
+  nav {
+    width: 100%;
+    height: 15vh;
+    transform: translateX(0);
+    margin-left: 25%;
+    position: unset;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+    height: 15vh;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu-btn {
+    display: none;
+    pointer-events: none;
+  }
+
+  .page {
+    margin: 2rem 0;
+  }
+
+  .title {
+    margin: 1rem 0 4rem 0;
+  }
+
+  .page p {
+    margin: 2rem 4rem;
+  }
+
+  .grid-container {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .footer {
+    height: 15vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #fefefe;
+    margin-top: 30.05vh;
   }
 }
