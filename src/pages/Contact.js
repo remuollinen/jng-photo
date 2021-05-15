@@ -6,7 +6,10 @@ function Contact() {
   return (
     <div className="page">
       <h1 className="title">Contact</h1>
-      <form name="contact" className="form" netlify>
+      <form name="contact" className="form">
+        {/* For Netlify form handling */}
+        <input type="hidden" name="form-name" value="contact" />
+        {/* For Netlify form handling */}
         <h3>Contact me</h3>
         <label className="label" htmlFor="name">
           Name
@@ -36,6 +39,7 @@ function Contact() {
         <input
           id="subject"
           type="text"
+          name="subject"
           className="input"
           placeholder="Subject"
           required
@@ -46,7 +50,7 @@ function Contact() {
         <textarea
           rows="10"
           id="message"
-          type="text"
+          name="message"
           className="input"
           placeholder="Message"
           required
