@@ -1,13 +1,15 @@
 import React from "react";
+import Slideshow from "../components/Slideshow";
 
 function Home() {
   return (
     <div className="page">
+      <Slideshow />
       <h1 className="title">Joel N'Gawé</h1>
-      <p>
-        Hello, I'm Joel N'Gawé and I take photographs around Finland. Welcome to
-        my website where you can view some of my photos, learn about me and
-        contact me if you would like to hire me.
+      <p style={{ lineHeight: "2rem" }}>
+        Hello, I'm Joel - a photographer based in Helsinki, Finland. Welcome to
+        my website where you can view some of my photos and learn more about me.
+        If you wish to work with me, feel free to contact me.
       </p>
     </div>
   );

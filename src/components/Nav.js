@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   const [menu, setMenu] = useState(false);
 
-  const toggleMenu = () => {
-    setMenu(!menu);
-  };
+  const toggleMenu = () => setMenu(!menu);
 
   return (
     <div className="navbar">
