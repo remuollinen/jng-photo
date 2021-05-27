@@ -1,4 +1,4 @@
-# Photographer website (first draft)
+# Photographer website (version 1)
 
 Made with React.
 
@@ -10,3 +10,4 @@ This website acts as a portfolio website for a photographer based in Helsinki, F
 - Dynamic styling for responsive navigation bar / menu
 - React Router
 - Netlify form handling
+- Image carousel component with react-slick library
