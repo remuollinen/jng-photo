@@ -13,7 +13,7 @@ function Slideshow() {
     slidesToShow: 1,
     autoplay: true,
     autoPlaySpeed: 3000,
-    lazyLoad: "anticipated",
+    lazyLoad: "progressive",
     responsive: [
       {
         breakpoint: 700,
